@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio target</title>
+</head>
+<body>
+    <h1>Verificador de Números de Fibonacci</h1>
+    <p>resultado aparece no console => Ctrl + Shift + C</p>
+    <script>
+        function quadradoPerf(x) {
+            const s = Math.sqrt(x);
+            return s === Math.floor(s);
+        }
+
+        function isFibonacci(n) {
+            return quadradoPerf(5 * n * n + 4) || quadradoPerf(5 * n * n - 4);
+        }
+
+        function main() {
+            const number = parseInt(prompt("Digite o número para verificar"), 10);
+            
+            if (isNaN(number)) {
+                console.log("Por favor, digite um número inteiro válido.");
+                return;
+            }
+
+            if (isFibonacci(number)) {
+                console.log(`O número ${number} pertence à sequência de Fibonacci.`);
+            } else {
+                console.log(`O número ${number} não pertence à sequência de Fibonacci.`);
+            }
+        }
+        main();
+    </script>
+</body>
+</html>

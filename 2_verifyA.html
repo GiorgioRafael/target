@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkLetterA(str) {
+            const countMinusculo = (str.match(/a/g) || []).length;
+            const countMaiusculo = (str.match(/A/g) || []).length;
+    
+            // Verifica se a letra 'a' está presente na string
+            const isPresentMinusculo = countMinusculo > 0;
+            const isPresentMaiusculo = countMaiusculo > 0;
+    
+            console.log(`A letra 'a' minúscula aparece ${countMinusculo} vezes.`);
+            console.log(`A letra 'A' maiúscula aparece ${countMaiusculo} vezes.`);
+            console.log(`A letra 'a' minúscula está presente: ${isPresentMinusculo}`);
+            console.log(`A letra 'A' maiúscula está presente: ${isPresentMaiusculo}`);
+        }
+    
+        // Exemplo de chamada da função
+        console.log("Checando: Ola mundo!")
+        checkLetterA("Ola mundo!");
+
+        console.log("Checando: Quero entrar para a target!")
+        checkLetterA("Quero entrar para a target!");
+
+        console.log("Checando: OLAAA!")
+        checkLetterA("OLAAA!");
+
+        console.log("Checando: Oi")
+        checkLetterA("Oi");
+    
+    </script>
+</body>
+</html>
